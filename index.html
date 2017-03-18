@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html ng-app="LunchCheck">
+  <head>
+    <meta charset="utf-8">
+    <title>Solution of Module 1</title>
+    <link href="/styles/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <script src="angular.min.js"></script>
+    <script src="app.js"></script>
+
+    <style>
+      .redBorder {
+        border-color: red;
+      }
+      .greenBorder {
+        border-color: green;
+      }
+      .margintTop10{
+        margin-top:10px;
+      }
+      .marginBottom10{
+        margin-bottom: 10px;
+      }
+    </style>
+
+  </head>
+  <body ng-controller="LunchCheckController">
+    <div class="container" >
+
+      <h2>Solution of Module 1</h2>
+      <hr>
+      <label>Enter your launch item to check</label><em> (each item should be separated by a comma ',')</em>
+
+      <div class="row margintTop10">
+        <div class="col-md-10   marginBottom10">
+          <input type="text"
+                 class="form-control"
+                 ng-class="texBoxBorder"
+                 ng-model="launchItem"
+                 placeholder="Enter launch item..."   />
+
+         <div ng-If="message" ng-class="aletText" class="alert margintTop10">
+           {{message}}
+         </div>
+        </div>
+
+        <div class="col-md-2">
+          <button class="btn btn-primary" ng-click="checkLaunchItem()">Check If Too Much</button>
+        </div>
+      </div>
+    </div>
+  </body>
+
+</html>
