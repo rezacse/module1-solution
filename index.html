@@ -20,6 +20,11 @@
       .marginBottom10{
         margin-bottom: 10px;
       }
+      .divAlert{
+        margin-top:10px;
+        padding:5px;
+        height:30px;
+      }
     </style>
 
   </head>
@@ -38,7 +43,7 @@
                  ng-model="launchItem"
                  placeholder="Enter launch item..."   />
 
-         <div ng-If="message" ng-class="aletText" class="alert margintTop10">
+         <div ng-If="message" ng-class="aletText" class="alert divAlert">
            {{message}}
          </div>
         </div>
